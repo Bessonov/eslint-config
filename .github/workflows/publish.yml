@@ -1,0 +1,23 @@
+name: Publish to npm
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    name: publish
+    runs-on: ubuntu-18.04
+    container:
+      image: node:12.13.0-alpine3.10
+    steps:
+      - uses: actions/checkout@v2.0.0
+      - name: prepare environment
+        run: npm install
+      - name: lint
+        run: npm run lint
+      - name: publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

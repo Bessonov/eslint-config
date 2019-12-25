@@ -1,0 +1,14 @@
+# https://github.com/release-drafter/release-drafter/blob/v5.3.1/.github/release-drafter.yml
+name-template: "v$NEXT_PATCH_VERSION"
+tag-template: "v$NEXT_PATCH_VERSION"
+template: |
+  # What's Changed
+
+  $CHANGES
+categories:
+  - title: "🚀 Features"
+    label: "type: feature"
+  - title: "🐛 Bug Fixes"
+    label: "type: bug"
+  - title: "Maintenance"
+    label: "type: maintenance"
