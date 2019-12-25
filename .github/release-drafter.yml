@@ -10,5 +10,5 @@ categories:
     label: "type: feature"
   - title: "🐛 Bug Fixes"
     label: "type: bug"
-  - title: "Maintenance"
+  - title: "♻️ Maintenance"
     label: "type: maintenance"

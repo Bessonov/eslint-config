@@ -1,4 +1,8 @@
 #!/bin/bash
 
-# https://docs.npmjs.com/adding-dist-tags-to-packages
-pnpm version patch -m "Bumping to %s"
+PACKAGE_VERSION=$(node -p "require('./package.json').version")
+git tag "v$PACKAGE_VERSION"
+
+npm version patch
+
+git commit -m "Release $PACKAGE_VERSION"
