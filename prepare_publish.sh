@@ -7,4 +7,5 @@ npm version patch
 
 git add package.json
 
+PACKAGE_VERSION=$(node -p "require('./package.json').version")
 git commit -m "Prepare release v$PACKAGE_VERSION"
