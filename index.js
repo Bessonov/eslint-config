@@ -5,6 +5,10 @@ module.exports = {
 			'error',
 			'never',
 		],
+		'comma-dangle': [
+			'error',
+			'always-multiline',
+		],
 		// Tabs works great with vim and other editors.
 		// You can adjust tabs to show it as 2 spaces.
 		// There is no reason to use spaces. Really.
@@ -30,6 +34,12 @@ module.exports = {
 		],
 		// raise from warning
 		'no-console': 'error',
+		'sort-imports': [
+			'error',
+			{
+				ignoreDeclarationSort: true,
+			},
+		],
 		// https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
 		'import/prefer-default-export': 'off',
 		'import/no-default-export': 'error',
