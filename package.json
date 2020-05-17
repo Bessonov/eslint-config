@@ -1,6 +1,6 @@
 {
 	"name": "@bessonovs/eslint-config",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Recommended eslint configuration",
 	"main": "index.js",
 	"sideEffects": false,
