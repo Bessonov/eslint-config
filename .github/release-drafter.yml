@@ -7,8 +7,11 @@ template: |
   $CHANGES
 categories:
   - title: "🚀 Features"
-    label: "type: feature"
+    labels:
+      - add
   - title: "🐛 Bug Fixes"
-    label: "type: bug"
+    labels:
+      - fix
   - title: "♻️ Maintenance"
-    label: "type: maintenance"
+    labels:
+      - update
