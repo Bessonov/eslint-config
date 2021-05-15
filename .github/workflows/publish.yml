@@ -8,15 +8,18 @@ on:
 jobs:
   publish:
     name: publish
-    runs-on: ubuntu-18.04
-    container:
-      image: node:12.13.0-alpine3.10
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2.0.0
+      - name: Read .nvmrc
+        id: nvm
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
       - name: prepare environment
         run: npm install
-      - name: lint
-        run: npm run lint
       - name: publish
         run: |
           echo '//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' >> .npmrc
